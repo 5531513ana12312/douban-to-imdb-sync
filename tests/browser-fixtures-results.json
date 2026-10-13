@@ -1,0 +1,100 @@
+{
+  "testedAt": "2026-10-13T15:18:17.380Z",
+  "script": "douban-to-imdb.user.js",
+  "sourceSha256": "c6ddbd3474b5f65ef26945d33a5f459ad8af3106582f5173124751a449bb66b7",
+  "browser": "isolated headless Chrome with fully intercepted offline requests",
+  "passed": 18,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Douban panel boots without any CDN or external script and survives hostile page CSS",
+      "result": "PASS",
+      "ms": 797
+    },
+    {
+      "name": "Collect parses all five star values, keeps unrated films, uses text safely and deduplicates rereads",
+      "result": "PASS",
+      "ms": 363
+    },
+    {
+      "name": "Pilot reads an empty queue, skips a title without IMDb ID and tests exactly one eligible film",
+      "result": "PASS",
+      "ms": 6008
+    },
+    {
+      "name": "Pilot explicitly reports no IMDb write when all available titles lack IDs",
+      "result": "PASS",
+      "ms": 2989
+    },
+    {
+      "name": "All-page collection starts without filters, follows pagination, and deduplicates overlapping pages and repeat scans",
+      "result": "PASS",
+      "ms": 4867
+    },
+    {
+      "name": "Controller processes one worker at a time, pauses after the current film, and resumes only pending films",
+      "result": "PASS",
+      "ms": 5882
+    },
+    {
+      "name": "Controller stops on worker failure or early tab closure and never marks the film successful",
+      "result": "PASS",
+      "ms": 2213
+    },
+    {
+      "name": "IMDb ignores a random hash, an unknown token, and a job for a different film",
+      "result": "PASS",
+      "ms": 1179
+    },
+    {
+      "name": "Existing identical IMDb score is recognized without reopening/submitting",
+      "result": "PASS",
+      "ms": 167
+    },
+    {
+      "name": "Existing different IMDb score is preserved by default",
+      "result": "PASS",
+      "ms": 152
+    },
+    {
+      "name": "Fresh dialog score protects a rating when the title page initially showed stale unrated status",
+      "result": "PASS",
+      "ms": 134
+    },
+    {
+      "name": "Unrated Douban film marks only the exact IMDb title watched and verifies persistence on reload",
+      "result": "PASS",
+      "ms": 1859
+    },
+    {
+      "name": "Watched-only mode leaves a supplied star score untouched",
+      "result": "PASS",
+      "ms": 1867
+    },
+    {
+      "name": "Already watched title is never toggled back off",
+      "result": "PASS",
+      "ms": 137
+    },
+    {
+      "name": "All 1–5 Douban stars submit exactly 2–10 IMDb points and confirm after a real reload",
+      "result": "PASS",
+      "ms": 9324
+    },
+    {
+      "name": "Explicit overwrite replaces an existing different score",
+      "result": "PASS",
+      "ms": 1864
+    },
+    {
+      "name": "Expired task lease between star selection and submission prevents writing",
+      "result": "PASS",
+      "ms": 156
+    },
+    {
+      "name": "Optimistic rating that disappears after reload never becomes success",
+      "result": "PASS",
+      "ms": 2507
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "douban-to-imdb-sync",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Transfer Douban watched titles and ratings to IMDb using Tampermonkey.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node tests/browser-fixtures.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
